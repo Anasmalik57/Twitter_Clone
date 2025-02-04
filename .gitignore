@@ -1,0 +1,11 @@
+# Node modules (ignore dependencies)
+node_modules/
+
+# Lock file (auto-generated, no need to track)
+package-lock.json
+
+# VS Code settings
+.vscode/
+
+# Windows-specific files
+Thumbs.db
