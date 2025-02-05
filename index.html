@@ -6,11 +6,90 @@
     <title>Twitter</title>
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
-    <div class="text-white container flex h-screen bg-slate-950">
-      <div class="first border border-white w-full">1</div>
-      <div class="second border border-white w-full">2</div>
-      <div class="third border border-white w-full">3</div>
+  <body class="bg-black text-white">
+    <div class="container flex mx-auto gap-2">
+      <div class="first w-[70%]">
+        <div class="logo w-8 invert mx-auto my-4">
+          <img src="./svgs/logo.svg" alt="" />
+        </div>
+        <div class="sidebar flex justify-end">
+          <!--w-1/2-->
+          <ul class="space-y-3 text-xl font-bold">
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/home.svg" alt="home" /> Home</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-6" src="./svgs/explore.svg" alt="home" />Explore</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/notifications.svg" alt="home" />Notifications</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in" ><img class="invert w-8" src="./svgs/grok.svg" alt="home" /> Grok</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/list.svg" alt="home" /> Lists</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/bookmark.svg" alt="home" />Bookmarks</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/community.svg" alt="home" />Communities</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/premium.svg" alt="home" />Premium</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in" ><img class="invert w-8" src="./svgs/profile.svg" alt="home" />Profile</li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/more.svg" alt="home" /> More
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="second w-full border-x-[1px] border-x-white">2</div>
+      <div class="third w-full border-x-[1px] border-x-white">
+        <div class="search m-4">
+          <input type="text" placeholder="Search......" class="w-1/2 rounded-full px-4 py-2 bg-[#16181C] text-white border-none outline-none" />
+        </div>
+        <div class="whats max-h-fit m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden" >
+          <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">What's Happening</h1>
+          <div class="itemcontainer max-h-[293px] overflow-auto">
+            <!-- 01 -->
+            <div class="item mb-3 px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
+              <div class="font-bold">#Anas</div>
+              <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
+            </div>
+            <!-- 02 -->
+            <div class="item mb-3 px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
+              <div class="font-bold">#Harry</div>
+              <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
+            </div>
+            <!-- 03 -->
+            <div class="item mb-3 px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
+              <div class="font-bold">#Sigma</div>
+              <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
+            </div>
+            <!-- 04 -->
+            <div class="item mb-3 px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
+              <div class="font-bold">#Web</div>
+              <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="whoTofollo m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden h-11"
+        >
+          <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">
+            What's Happening
+          </h1>
+
+          <!-- 01 -->
+          <div class="item px-5 p-3 space-y-4 border">
+            <div class="font-bold text-sm bg-slate-800 text-gray-200 tracking-wide cursor-pointer">Anas</div>
+            <div class="font-bold text-sm bg-slate-800 text-gray-200 tracking-wide cursor-pointer">Imtiaz Jaleel</div>
+            <div class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer">Yousuf Pathan</div>
+          </div>
+
+          <div class="showmore text-blue-500 tracking-wide px-4">show more</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+<!-- 13:51 -->
