@@ -64,17 +64,31 @@
         <hr class="border-gray-500" />
         
         <!-- What's Happening section -->
-        <div class="whatsHappening flex gap-4">
+        <div class="whatsHappening flex gap-3">
           <div class="m-4 w-16 h-[3.3rem] object-cover rounded-full overflow-hidden">
             <img src="./svgs/profile.png" class="w-full h-full filter" alt="profile" />
           </div>
           <div class="flex flex-col my-4 gap-2 w-full">
-            <input type="text" class="w-full bg-black text-white h-7 outline-none text-xl" placeholder="What is happening?!" />
+            <input type="text" class="post-input-field w-full bg-black text-white h-7 outline-none text-lg" placeholder="What is happening?!" />
             <div class="text-blue-500 flex items-center gap-1 cursor-pointer">
               <img src="./svgs/earth.svg" class="w-4" alt="globe" />
               <span class="text-xs"> Everyone can reply </span>
             </div>
-            <div class="w-full border"></div>
+            <hr class="border-gray-500 my-2 w-11/12 ">
+            <!-- blue-icons container -->
+             <div class="blueiconsContainer w-11/12 flex justify-between  items-center ">
+              <div class="blueicons flex gap-2  h-8 justify-start items-center">
+                <img class="w-6 h-6 cursor-pointer" src="./svgs/media.svg" alt="media" title="media">
+                <img class="w-6 h-6 cursor-pointer" src="./svgs/gif.svg" alt="gif" title="gif">
+                <img class="w-6 h-6 cursor-pointer" src="./svgs/grokicon.svg" alt="grokIcon" title="grokIcon">
+                <img class="w-6 h-6 cursor-pointer" src="./svgs/poll.svg" alt="poll" title="poll">
+                <img class="w-6 h-6 cursor-pointer" src="./svgs/emoji.svg" alt="emoji" title="emoji">
+                <img class="w-6 h-6 cursor-pointer" src="./svgs/schedule.svg" alt="schedule" title="schedule">
+                <img class="w-6 h-6 cursor-pointer" src="./svgs/location.svg" alt="location" title="location">
+              </div>
+              <!-- POST -->
+               <button class="post-btn px-6 py-2 font-bold bg-white bg-opacity-70 text-black text-sm rounded-full">Post</button>
+             </div>
           </div>
         </div>
         
@@ -136,5 +150,25 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const postbtn = document.querySelector(".post-btn");
+const postInputField = document.querySelector(".post-input-field");
+
+// Initially set the button to red
+postbtn.classList.replace("bg-opacity-100", "bg-opacity-70");
+
+// Listen for input changes in the field
+postInputField.addEventListener("input", () => {
+  const inputValue = postInputField.value.trim(); // Get input value
+
+  if (inputValue === "") {
+    postbtn.classList.replace("bg-opacity-100", "bg-opacity-70"); // Keep the button red if input is empty
+  } else {
+    postbtn.classList.replace("bg-opacity-70", "bg-opacity-100"); // Change to white when input starts
+  }
+});
+
+    </script>
   </body>
 </html>
