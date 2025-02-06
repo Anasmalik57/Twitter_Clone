@@ -5,130 +5,742 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twitter</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <link rel="shortcut icon" href="//abs.twimg.com/favicons/twitter.3.ico" />
   </head>
   <body class="bg-black text-white">
     <div class="container flex mx-auto gap-2">
-      
       <!-- Sidebar section -->
       <div class="first w-[70%]">
         <!-- Logo -->
         <div class="logo w-8 invert mx-auto my-4">
           <img src="./svgs/logo.svg" alt="Twitter Logo" />
         </div>
-        
+
         <!-- Navigation menu -->
-        <div class="sidebar flex justify-end">
+        <div class="sidebar flex flex-col items-end">
           <ul class="space-y-3 text-xl font-bold">
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/home.svg" alt="home" /> Home
-            </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-6" src="./svgs/explore.svg" alt="explore"/>Explore</li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/notifications.svg" alt="notifications" />Notifications </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/grok.svg" alt="grok" /> Grok
-            </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/list.svg" alt="lists" /> Lists
-            </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/bookmark.svg" alt="bookmarks" />Bookmarks </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/community.svg" alt="communities" />Communities </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/premium.svg" alt="premium" />Premium </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/profile.svg" alt="profile" />Profile </li>
-            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in">
-              <img class="invert w-8" src="./svgs/more.svg" alt="more" /> More
-            </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/home.svg" alt="home" /> <span>Home</span> </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-6" src="./svgs/explore.svg" alt="explore" /> <span>Explore</span> </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/notifications.svg" alt="notifications" /><span>Notifications</span></li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"> <img class="invert w-8" src="./svgs/grok.svg" alt="grok" /> <span>Grok</span> </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in" > <img class="invert w-8" src="./svgs/list.svg" alt="lists" /> <span>Lists</span> </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"> <img class="invert w-8" src="./svgs/bookmark.svg" alt="bookmarks" /> <span>Bookmarks</span> </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"> <img class="invert w-8" src="./svgs/community.svg" alt="communities" /> <span>Communities</span> </li>
+            <li  class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"> <img class="invert w-8" src="./svgs/premium.svg" alt="premium" /> <span>Premium</span> </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"> <img class="invert w-8" src="./svgs/profile.svg" alt="profile" /> <span>Profile</span> </li>
+            <li class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-4 py-2 transition-all ease-in"><img class="invert w-8" src="./svgs/more.svg" alt="more" /> <span>More</span> </li>
+            <li class="w-4/5 flex justify-center"> <button class="postbtnblue font-semibold tracking-wide bg-opacity-100 bg-blue-500 px-10 ml-4 py-2 text-lg w-full border-none text-white rounded-full active:tracking-wider active:translate-y-1 transition-all ease-in"> Post </button> </li>
           </ul>
         </div>
       </div>
-      
+
       <!-- Main content area -->
-      <div class="second w-full border-x-[1px] border-x-gray-500">
-        
+      <div
+        class="second w-full border-x-[1px] border-x-gray-500 h-screen overflow-y-hidden"
+      >
         <!-- Top navigation bar -->
         <div class="top flex justify-center items-center m-4 relative">
-          <div class="absolute w-[66px] h-[4px] rounded-full bg-blue-500 left-[17%] bottom-[-33%]"></div>
-          <div class="w-1/2 left flex justify-center font-semibold text-xl cursor-pointer">For You</div>
-          <div class="w-1/2 right flex justify-center font-semibold text-xl cursor-pointer">Following</div>
+          <div
+            class="absolute w-[66px] h-[4px] rounded-full bg-blue-500 left-[17%] bottom-[-33%]"
+          ></div>
+          <div
+            class="w-1/2 left flex justify-center font-semibold text-xl cursor-pointer"
+          >
+            For You
+          </div>
+          <div
+            class="w-1/2 right flex justify-center font-semibold text-xl cursor-pointer"
+          >
+            Following
+          </div>
           <div class="settings mx-2 cursor-pointer">
             <img class="invert" src="./svgs/settings.svg" alt="setting" />
           </div>
         </div>
-        
+
         <!-- Divider line -->
         <hr class="border-gray-500" />
-        
+
         <!-- What's Happening section -->
         <div class="whatsHappening flex gap-3">
-          <div class="m-4 w-16 h-[3.3rem] object-cover rounded-full overflow-hidden">
-            <img src="./svgs/profile.png" class="w-full h-full filter" alt="profile" />
+          <div
+            class="m-4 w-16 h-[3.3rem] object-cover rounded-full overflow-hidden"
+          >
+            <img
+              src="./svgs/profile.png"
+              class="w-full h-full filter"
+              alt="profile"
+            />
           </div>
           <div class="flex flex-col my-4 gap-2 w-full">
-            <input type="text" class="post-input-field w-full bg-black text-white h-7 outline-none text-lg" placeholder="What is happening?!" />
+            <input
+              type="text"
+              class="post-input-field w-full bg-black text-white h-7 outline-none text-lg"
+              placeholder="What is happening?!"
+            />
             <div class="text-blue-500 flex items-center gap-1 cursor-pointer">
               <img src="./svgs/earth.svg" class="w-4" alt="globe" />
               <span class="text-xs"> Everyone can reply </span>
             </div>
-            <hr class="border-gray-500 my-2 w-11/12 ">
+            <hr class="border-gray-500 my-2 w-11/12" />
             <!-- blue-icons container -->
-             <div class="blueiconsContainer w-11/12 flex justify-between  items-center ">
-              <div class="blueicons flex gap-2  h-8 justify-start items-center">
-                <img class="w-6 h-6 cursor-pointer" src="./svgs/media.svg" alt="media" title="media">
-                <img class="w-6 h-6 cursor-pointer" src="./svgs/gif.svg" alt="gif" title="gif">
-                <img class="w-6 h-6 cursor-pointer" src="./svgs/grokicon.svg" alt="grokIcon" title="grokIcon">
-                <img class="w-6 h-6 cursor-pointer" src="./svgs/poll.svg" alt="poll" title="poll">
-                <img class="w-6 h-6 cursor-pointer" src="./svgs/emoji.svg" alt="emoji" title="emoji">
-                <img class="w-6 h-6 cursor-pointer" src="./svgs/schedule.svg" alt="schedule" title="schedule">
-                <img class="w-6 h-6 cursor-pointer" src="./svgs/location.svg" alt="location" title="location">
+            <div
+              class="blueiconsContainer w-11/12 flex justify-between items-center"
+            >
+              <div class="blueicons flex gap-2 h-8 justify-start items-center">
+                <img
+                  class="w-6 h-6 cursor-pointer"
+                  src="./svgs/media.svg"
+                  alt="media"
+                  title="media"
+                />
+                <img
+                  class="w-6 h-6 cursor-pointer"
+                  src="./svgs/gif.svg"
+                  alt="gif"
+                  title="gif"
+                />
+                <img
+                  class="w-6 h-6 cursor-pointer"
+                  src="./svgs/grokicon.svg"
+                  alt="grokIcon"
+                  title="grokIcon"
+                />
+                <img
+                  class="w-6 h-6 cursor-pointer"
+                  src="./svgs/poll.svg"
+                  alt="poll"
+                  title="poll"
+                />
+                <img
+                  class="w-6 h-6 cursor-pointer"
+                  src="./svgs/emoji.svg"
+                  alt="emoji"
+                  title="emoji"
+                />
+                <img
+                  class="w-6 h-6 cursor-pointer"
+                  src="./svgs/schedule.svg"
+                  alt="schedule"
+                  title="schedule"
+                />
+                <img
+                  class="w-6 h-6 cursor-pointer"
+                  src="./svgs/location.svg"
+                  alt="location"
+                  title="location"
+                />
               </div>
               <!-- POST -->
-               <button class="post-btn px-6 py-2 font-bold bg-white bg-opacity-70 text-black text-sm rounded-full">Post</button>
-             </div>
+              <button
+                class="post-btn px-6 py-2 font-bold bg-white bg-opacity-70 text-black text-sm rounded-full active:tracking-wider active:translate-y-0.5 transition-all ease-in"
+              >
+                Post
+              </button>
+            </div>
           </div>
         </div>
-        
+
         <!-- Divider line -->
         <hr class="border-gray-500" />
+
+        <!-- Posts -->
+
+        <!-- Main container for all posts -->
+        <div class="posts m-6 h-2/3 overflow-auto">
+          <!-- Individual post container -->
+          <div class="post flex flex-col rounded-lg">
+            <!-- User information section -->
+            <div class="userinfo flex flex-row cursor-pointer gap-4">
+              <!-- Profile Image -->
+              <div class="profile-image">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1881743826097754112/lg0gj9Vg_200x200.jpg"
+                  class="w-12 rounded-full"
+                  alt="Profile Picture"
+                />
+              </div>
+              <!-- User details and post content -->
+              <div
+                class="post-details flex flex-col gap-1 w-full text-sm tracking-wide"
+              >
+                <!-- Username, handle, and post time -->
+                <div class="user-info flex h-fit">
+                  <span
+                    class="username font-bold flex items-center h-fit gap-1 hover:underline"
+                    >Anas Malik
+                    <img
+                      class="w-4 h-fit text-blue-700"
+                      src="./svgs/verify.svg"
+                      alt="Verified Badge"
+                  /></span>
+                  <div class="flex-gap-1">
+                    <span class="handle text-[#71767B] ml-1">@ItsAnas474 </span>
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >•</span
+                    >
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >6h</span
+                    >
+                  </div>
+                </div>
+
+                <flex class="flex flex-col">
+                  <!-- User Bio -->
+                  <div class="bio pb-2">Legend</div>
+
+                  <!-- Media content section -->
+                  <div
+                    class="borderpost-media rounded-xl w-fit h-fit aspect-video overflow-hidden"
+                  >
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://pbs.twimg.com/media/GijKISOXMAAh5Zk?format=jpg&name=small"
+                      alt="Post Media"
+                    />
+                  </div>
+                  <div class="icons mt-2 w-full flex justify-between">
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/reply.svg"
+                        class="w-5 text-gray-500"
+                        alt="reply"
+                        title="reply"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/repost.svg"
+                        class="w-5 text-gray-500"
+                        alt="repost"
+                        title="repost"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/like.svg"
+                        class="w-5 text-gray-500"
+                        alt="like"
+                        title="like"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/views.svg"
+                        class="w-5 text-gray-500"
+                        alt="views"
+                        title="views"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-2 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-5 py-1 rounded-full hover:bg-slate-900"
+                    >
+                      <img
+                        src="./svgs/bookmarkicon.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="bookmark"
+                        title="bookmark"
+                      />
+                      <img
+                        src="./svgs/share.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="share"
+                        title="share"
+                      />
+                    </span>
+                  </div>
+                </flex>
+              </div>
+            </div>
+          </div>
+          <div class="post flex flex-col rounded-lg">
+            <!-- User information section -->
+            <div class="userinfo flex flex-row cursor-pointer gap-4">
+              <!-- Profile Image -->
+              <div class="profile-image">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1881743826097754112/lg0gj9Vg_200x200.jpg"
+                  class="w-12 rounded-full"
+                  alt="Profile Picture"
+                />
+              </div>
+              <!-- User details and post content -->
+              <div
+                class="post-details flex flex-col gap-1 w-full text-sm tracking-wide"
+              >
+                <!-- Username, handle, and post time -->
+                <div class="user-info flex h-fit">
+                  <span
+                    class="username font-bold flex items-center h-fit gap-1 hover:underline"
+                    >Anas Malik
+                    <img
+                      class="w-4 h-fit text-blue-700"
+                      src="./svgs/verify.svg"
+                      alt="Verified Badge"
+                  /></span>
+                  <div class="flex-gap-1">
+                    <span class="handle text-[#71767B] ml-1">@ItsAnas474 </span>
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >•</span
+                    >
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >6h</span
+                    >
+                  </div>
+                </div>
+
+                <flex class="flex flex-col">
+                  <!-- User Bio -->
+                  <div class="bio pb-2">Legend</div>
+
+                  <!-- Media content section -->
+                  <div
+                    class="borderpost-media rounded-xl w-fit h-fit aspect-video overflow-hidden"
+                  >
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://pbs.twimg.com/media/GijKISOXMAAh5Zk?format=jpg&name=small"
+                      alt="Post Media"
+                    />
+                  </div>
+                  <div class="icons mt-2 w-full flex justify-between">
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/reply.svg"
+                        class="w-5 text-gray-500"
+                        alt="reply"
+                        title="reply"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/repost.svg"
+                        class="w-5 text-gray-500"
+                        alt="repost"
+                        title="repost"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/like.svg"
+                        class="w-5 text-gray-500"
+                        alt="like"
+                        title="like"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/views.svg"
+                        class="w-5 text-gray-500"
+                        alt="views"
+                        title="views"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-2 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-5 py-1 rounded-full hover:bg-slate-900"
+                    >
+                      <img
+                        src="./svgs/bookmarkicon.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="bookmark"
+                        title="bookmark"
+                      />
+                      <img
+                        src="./svgs/share.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="share"
+                        title="share"
+                      />
+                    </span>
+                  </div>
+                </flex>
+              </div>
+            </div>
+          </div>
+          <div class="post flex flex-col rounded-lg">
+            <!-- User information section -->
+            <div class="userinfo flex flex-row cursor-pointer gap-4">
+              <!-- Profile Image -->
+              <div class="profile-image">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1881743826097754112/lg0gj9Vg_200x200.jpg"
+                  class="w-12 rounded-full"
+                  alt="Profile Picture"
+                />
+              </div>
+              <!-- User details and post content -->
+              <div
+                class="post-details flex flex-col gap-1 w-full text-sm tracking-wide"
+              >
+                <!-- Username, handle, and post time -->
+                <div class="user-info flex h-fit">
+                  <span
+                    class="username font-bold flex items-center h-fit gap-1 hover:underline"
+                    >Anas Malik
+                    <img
+                      class="w-4 h-fit text-blue-700"
+                      src="./svgs/verify.svg"
+                      alt="Verified Badge"
+                  /></span>
+                  <div class="flex-gap-1">
+                    <span class="handle text-[#71767B] ml-1">@ItsAnas474 </span>
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >•</span
+                    >
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >6h</span
+                    >
+                  </div>
+                </div>
+
+                <flex class="flex flex-col">
+                  <!-- User Bio -->
+                  <div class="bio pb-2">Legend</div>
+
+                  <!-- Media content section -->
+                  <div
+                    class="borderpost-media rounded-xl w-fit h-fit aspect-video overflow-hidden"
+                  >
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://pbs.twimg.com/media/GijKISOXMAAh5Zk?format=jpg&name=small"
+                      alt="Post Media"
+                    />
+                  </div>
+                  <div class="icons mt-2 w-full flex justify-between">
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/reply.svg"
+                        class="w-5 text-gray-500"
+                        alt="reply"
+                        title="reply"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/repost.svg"
+                        class="w-5 text-gray-500"
+                        alt="repost"
+                        title="repost"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/like.svg"
+                        class="w-5 text-gray-500"
+                        alt="like"
+                        title="like"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/views.svg"
+                        class="w-5 text-gray-500"
+                        alt="views"
+                        title="views"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-2 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-5 py-1 rounded-full hover:bg-slate-900"
+                    >
+                      <img
+                        src="./svgs/bookmarkicon.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="bookmark"
+                        title="bookmark"
+                      />
+                      <img
+                        src="./svgs/share.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="share"
+                        title="share"
+                      />
+                    </span>
+                  </div>
+                </flex>
+              </div>
+            </div>
+          </div>
+          <div class="post flex flex-col rounded-lg">
+            <!-- User information section -->
+            <div class="userinfo flex flex-row cursor-pointer gap-4">
+              <!-- Profile Image -->
+              <div class="profile-image">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1881743826097754112/lg0gj9Vg_200x200.jpg"
+                  class="w-12 rounded-full"
+                  alt="Profile Picture"
+                />
+              </div>
+              <!-- User details and post content -->
+              <div
+                class="post-details flex flex-col gap-1 w-full text-sm tracking-wide"
+              >
+                <!-- Username, handle, and post time -->
+                <div class="user-info flex h-fit">
+                  <span
+                    class="username font-bold flex items-center h-fit gap-1 hover:underline"
+                    >Anas Malik
+                    <img
+                      class="w-4 h-fit text-blue-700"
+                      src="./svgs/verify.svg"
+                      alt="Verified Badge"
+                  /></span>
+                  <div class="flex-gap-1">
+                    <span class="handle text-[#71767B] ml-1">@ItsAnas474 </span>
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >•</span
+                    >
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >6h</span
+                    >
+                  </div>
+                </div>
+
+                <flex class="flex flex-col">
+                  <!-- User Bio -->
+                  <div class="bio pb-2">Legend</div>
+
+                  <!-- Media content section -->
+                  <div
+                    class="borderpost-media rounded-xl w-fit h-fit aspect-video"
+                  >
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://pbs.twimg.com/media/GijKISOXMAAh5Zk?format=jpg&name=small"
+                      alt="Post Media"
+                    />
+                  </div>
+                  <div class="icons mt-2 w-full flex justify-between">
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/reply.svg"
+                        class="w-5 text-gray-500"
+                        alt="reply"
+                        title="reply"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/repost.svg"
+                        class="w-5 text-gray-500"
+                        alt="repost"
+                        title="repost"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/like.svg"
+                        class="w-5 text-gray-500"
+                        alt="like"
+                        title="like"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/views.svg"
+                        class="w-5 text-gray-500"
+                        alt="views"
+                        title="views"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-2 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-5 py-1 rounded-full hover:bg-slate-900"
+                    >
+                      <img
+                        src="./svgs/bookmarkicon.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="bookmark"
+                        title="bookmark"
+                      />
+                      <img
+                        src="./svgs/share.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="share"
+                        title="share"
+                      />
+                    </span>
+                  </div>
+                </flex>
+              </div>
+            </div>
+          </div>
+          <div class="post flex flex-col rounded-lg">
+            <!-- User information section -->
+            <div class="userinfo flex flex-row cursor-pointer gap-4">
+              <!-- Profile Image -->
+              <div class="profile-image">
+                <img
+                  src="https://pbs.twimg.com/profile_images/1881743826097754112/lg0gj9Vg_200x200.jpg"
+                  class="w-12 rounded-full"
+                  alt="Profile Picture"
+                />
+              </div>
+              <!-- User details and post content -->
+              <div
+                class="post-details flex flex-col gap-1 w-full text-sm tracking-wide"
+              >
+                <!-- Username, handle, and post time -->
+                <div class="user-info flex h-fit">
+                  <span
+                    class="username font-bold flex items-center h-fit gap-1 hover:underline"
+                    >Anas Malik
+                    <img
+                      class="w-4 h-fit text-blue-700"
+                      src="./svgs/verify.svg"
+                      alt="Verified Badge"
+                  /></span>
+                  <div class="flex-gap-1">
+                    <span class="handle text-[#71767B] ml-1">@ItsAnas474 </span>
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >•</span
+                    >
+                    <span class="post-timing text-[#71767B] hover:underline"
+                      >6h</span
+                    >
+                  </div>
+                </div>
+
+                <flex class="flex flex-col">
+                  <!-- User Bio -->
+                  <div class="bio pb-2">Legend</div>
+
+                  <!-- Media content section -->
+                  <div
+                    class="borderpost-media rounded-xl w-fit h-fit aspect-video"
+                  >
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://pbs.twimg.com/media/GijKISOXMAAh5Zk?format=jpg&name=small"
+                      alt="Post Media"
+                    />
+                  </div>
+                  <div class="icons mt-2 w-full flex justify-between">
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/reply.svg"
+                        class="w-5 text-gray-500"
+                        alt="reply"
+                        title="reply"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/repost.svg"
+                        class="w-5 text-gray-500"
+                        alt="repost"
+                        title="repost"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/like.svg"
+                        class="w-5 text-gray-500"
+                        alt="like"
+                        title="like"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-1 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-3 py-1 rounded-full hover:bg-slate-900"
+                      ><img
+                        src="./svgs/views.svg"
+                        class="w-5 text-gray-500"
+                        alt="views"
+                        title="views"
+                      />464</span
+                    >
+                    <span
+                      class="cursor-pointer gap-2 w-fit text-xs flex items-center justify-end font-semibold text-slate-400 px-5 py-1 rounded-full hover:bg-slate-900"
+                    >
+                      <img
+                        src="./svgs/bookmarkicon.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="bookmark"
+                        title="bookmark"
+                      />
+                      <img
+                        src="./svgs/share.svg"
+                        class="w-5 text-gray-500 rounded-sm hover:bg-black"
+                        alt="share"
+                        title="share"
+                      />
+                    </span>
+                  </div>
+                </flex>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="w-full border-gray-500" />
       </div>
-      
+
       <!-- Sidebar area -->
       <div class="third w-full">
-        
         <!-- Search bar -->
         <div class="search m-4">
-          <input type="text" placeholder="Search......" class="w-1/2 rounded-full px-4 py-2 bg-[#16181C] text-white border-none outline-none" />
+          <input
+            type="text"
+            placeholder="Search......"
+            class="w-1/2 rounded-full px-4 py-2 bg-[#16181C] text-white border-none outline-none"
+          />
         </div>
-        
+
         <!-- What's Happening section -->
-        <div class="whats max-h-fit m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden">
-          <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">What's Happening</h1>
+        <div
+          class="whats max-h-fit m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden"
+        >
+          <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">
+            What's Happening
+          </h1>
           <div class="itemcontainer max-h-[260px] overflow-auto">
             <!-- Trending item 01 -->
-            <div class="item  px-5 p-3 hover:bg-[#23262c] cursor-pointer">
-              <div class="text-sm font-semibold text-gray-500">Trending in India</div>
+            <div class="item px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
               <div class="font-bold">#Anas</div>
               <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
             </div>
             <!-- Trending item 02 -->
-            <div class="item  px-5 p-3 hover:bg-[#23262c] cursor-pointer">
-              <div class="text-sm font-semibold text-gray-500">Trending in India</div>
-              <div class="font-bold">#Harry</div>
+            <div class="item px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
+              <div class="font-bold">#Aamaan</div>
               <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
             </div>
             <!-- Trending item 03 -->
-            <div class="item  px-5 p-3 hover:bg-[#23262c] cursor-pointer">
-              <div class="text-sm font-semibold text-gray-500">Trending in India</div>
+            <div class="item px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
               <div class="font-bold">#Sigma</div>
               <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
             </div>
             <!-- Trending item 04 -->
-            <div class="item  px-5 p-3 hover:bg-[#23262c] cursor-pointer">
-              <div class="text-sm font-semibold text-gray-500">Trending in India</div>
+            <div class="item px-5 p-3 hover:bg-[#23262c] cursor-pointer">
+              <div class="text-sm font-semibold text-gray-500">
+                Trending in India
+              </div>
               <div class="font-bold">#Web</div>
               <div class="text-sm font-semibold text-gray-500">40.2k Posts</div>
             </div>
@@ -136,20 +748,51 @@
         </div>
 
         <!-- Who to follow section -->
-        <div class="whoTofollo m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden">
-          <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">Who to follow</h1>
+        <div
+          class="whoTofollo m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden"
+        >
+          <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">
+            Who to follow
+          </h1>
           <!-- Follow suggested list -->
-          <div class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth">
-            <div class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer">Anas</div> 
-            <div class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer">Imtiaz Jaleel</div> 
-            <div class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer">Yousuf Pathan</div> 
-            <div class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer">Imraan</div> 
-            <div class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer">Irfaan Pathan</div> 
+          <div
+            class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth"
+          >
+            <div
+              class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer"
+            >
+              Anas
+            </div>
+            <div
+              class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer"
+            >
+              Imtiaz Jaleel
+            </div>
+            <div
+              class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer"
+            >
+              Yousuf Pathan
+            </div>
+            <div
+              class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer"
+            >
+              Imraan
+            </div>
+            <div
+              class="font-bold text-sm text-gray-200 tracking-wide cursor-pointer"
+            >
+              Irfaan Pathan
+            </div>
           </div>
-          <div class="showmore text-blue-500 tracking-wide px-4 cursor-pointer hover:underline transition-all ease-in">show more</div>
+          <div
+            class="showmore text-blue-500 tracking-wide px-4 cursor-pointer hover:underline transition-all ease-in"
+          >
+            show more
+          </div>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
+<!-- 1:16:52 -->
