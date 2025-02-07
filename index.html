@@ -17,7 +17,7 @@
         </div>
         <!-- Navigation menu -->
         <div class="sidebar flex flex-col items-center lg:items-end">
-          <ul class="space-y-3 text-xl font-bold">
+          <ul class="space-y-2 text-xl font-bold">
             <li
               class="flex items-center gap-3 w-fit hover:bg-gray-900 rounded-full cursor-pointer px-2 py-1 lg:px-4 lg:py-2 transition-all ease-in"
             >
@@ -117,6 +117,31 @@
                 <img src="./svgs/postpencil.svg" alt="postbtnblue" />
               </button>
             </li>
+            <!-- user-account -->
+            <div
+              class="w-full hidden lg:flex p-2.5 rounded-full justify-between items-center cursor-pointer hover:bg-[#23262c]"
+            >
+              <div class="flex gap-2">
+                <div
+                  class="w-10 aspect-square object-cover rounded-full overflow-hidden"
+                >
+                  <img
+                    src="./svgs/profile.png"
+                    class="w-full h-full filter"
+                    alt="profile"
+                  />
+                </div>
+                <div class="userinfo">
+                  <div class="username text-sm font-semibold">Anas Malik</div>
+                  <div class="userhandle text-xs font-semibold text-slate-500">
+                    @ItsAnas474
+                  </div>
+                </div>
+              </div>
+              <div class="w-8 rounded-full hover:bg-[#3d434f]">
+                <img src="./svgs/dots.svg" alt="" />
+              </div>
+            </div>
           </ul>
         </div>
       </div>
@@ -162,7 +187,7 @@
           <div class="flex flex-col my-4 gap-2 w-full">
             <input
               type="text"
-              class="post-input-field w-full bg-black text-white h-7 outline-none text-lg"
+              class="post-input-field w-full bg-black text-white h-7 outline-none text-lg pr-8 tracking-wide"
               placeholder="What is happening?!"
             />
             <div class="text-blue-500 flex items-center gap-1 cursor-pointer">
@@ -819,7 +844,7 @@
 
         <!-- What's Happening section -->
         <div
-          class="whats max-h-fit m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden"
+          class="whats max-h-fit m-4 bg-[#16181c] rounded-lg w-2/3 py-[19px] space-y-3 overflow-hidden"
         >
           <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">
             What's Happening
@@ -862,70 +887,170 @@
 
         <!-- Who to follow section -->
         <div
-          class="whoTofollo m-4 bg-[#16181c] rounded-lg w-2/3 py-5 space-y-3 overflow-hidden"
+          class="whoTofollo m-4 mb-0 bg-[#16181c] rounded-lg w-2/3 py-[19px] space-y-3 overflow-hidden"
         >
           <h1 class="text-2xl font-semibold tracking-wide px-4 z-10">
             Who to follow
           </h1>
-         <div class="suggestionsByX h-40 overflow-y-auto">
-           <!-- Follow suggested list -->
+          <div class="suggestionsByX h-[132px] overflow-y-auto">
+            <!-- Follow suggested list -->
             <!-- item1 -->
-           <div class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in">
-            <div class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full">
-              <div class="p1 "><img class="w-[72px] rounded-full" src="https://pbs.twimg.com/profile_images/1807797646255620096/OV4eqFJf_bigger.jpg" alt=""></div>
-              <div class="p2 font-bold pl-2  w-96 flex flex-col">
-                <span class="username text-white text-sm">Google for Developers</span>
-                <span class="userhandle text-xs text-gray-500 font-semibold">@googledevs</span>
+            <div
+              class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in"
+            >
+              <div
+                class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full"
+              >
+                <div class="p1">
+                  <img
+                    class="w-[72px] rounded-full"
+                    src="https://pbs.twimg.com/profile_images/1807797646255620096/OV4eqFJf_bigger.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="p2 font-bold pl-2 w-96 flex flex-col">
+                  <span class="username text-white text-sm"
+                    >Google for Developers</span
+                  >
+                  <span class="userhandle text-xs text-gray-500 font-semibold"
+                    >@googledevs</span
+                  >
+                </div>
+                <button
+                  class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 hover:bn bs"
+                >
+                  Follow
+                </button>
               </div>
-              <button class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 ">Follow</button>
             </div>
-          </div>
             <!-- item2 -->
-           <div class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in">
-            <div class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full">
-              <div class="p1 "><img class="w-[72px] rounded-full" src="https://pbs.twimg.com/profile_images/1846614339169693696/AnrWwe-G_bigger.png" alt=""></div>
-              <div class="p2 font-bold pl-2  w-96 flex flex-col">
-                <span class="username text-white text-sm">Firebase</span>
-                <span class="userhandle text-xs text-gray-500 font-semibold">@Firebase</span>
+            <div
+              class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in"
+            >
+              <div
+                class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full"
+              >
+                <div class="p1">
+                  <img
+                    class="w-[72px] rounded-full"
+                    src="https://pbs.twimg.com/profile_images/1846614339169693696/AnrWwe-G_bigger.png"
+                    alt=""
+                  />
+                </div>
+                <div class="p2 font-bold pl-2 w-96 flex flex-col">
+                  <span class="username text-white text-sm">Firebase</span>
+                  <span class="userhandle text-xs text-gray-500 font-semibold"
+                    >@Firebase</span
+                  >
+                </div>
+                <button
+                  class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 hover:bn bs"
+                >
+                  Follow
+                </button>
               </div>
-              <button class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 ">Follow</button>
             </div>
-          </div>
             <!-- item3 -->
-           <div class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in">
-            <div class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full">
-              <div class="p1 "><img class="w-[72px] rounded-full" src="https://pbs.twimg.com/profile_images/1276770212927410176/qTgTIejk_bigger.jpg" alt=""></div>
-              <div class="p2 font-bold pl-2  w-96 flex flex-col">
-                <span class="username text-white text-sm">freeCodeCamp.org</span>
-                <span class="userhandle text-xs text-gray-500 font-semibold">@freeCodeCamp</span>
+            <div
+              class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in"
+            >
+              <div
+                class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full"
+              >
+                <div class="p1">
+                  <img
+                    class="w-[72px] rounded-full"
+                    src="https://pbs.twimg.com/profile_images/1276770212927410176/qTgTIejk_bigger.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="p2 font-bold pl-2 w-96 flex flex-col">
+                  <span class="username text-white text-sm"
+                    >freeCodeCamp.org</span
+                  >
+                  <span class="userhandle text-xs text-gray-500 font-semibold"
+                    >@freeCodeCamp</span
+                  >
+                </div>
+                <button
+                  class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 hover:bn bs"
+                >
+                  Follow
+                </button>
               </div>
-              <button class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 ">Follow</button>
             </div>
-          </div>
             <!-- item4 -->
-           <div class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in">
-            <div class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full">
-              <div class="p1 "><img class="w-[72px] rounded-full" src="https://pbs.twimg.com/profile_images/1768324979303874560/3IRejxE9_bigger.jpg" alt=""></div>
-              <div class="p2 font-bold pl-2  w-96 flex flex-col">
-                <span class="username text-white text-sm">Microsoft Developer</span>
-                <span class="userhandle text-xs text-gray-500 font-semibold">@msdev</span>
+            <div
+              class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in"
+            >
+              <div
+                class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full"
+              >
+                <div class="p1">
+                  <img
+                    class="w-[72px] rounded-full"
+                    src="https://pbs.twimg.com/profile_images/1768324979303874560/3IRejxE9_bigger.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="p2 font-bold pl-2 w-96 flex flex-col">
+                  <span class="username text-white text-sm"
+                    >Microsoft Developer</span
+                  >
+                  <span class="userhandle text-xs text-gray-500 font-semibold"
+                    >@msdev</span
+                  >
+                </div>
+                <button
+                  class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 hover:bn bs"
+                >
+                  Follow
+                </button>
               </div>
-              <button class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 ">Follow</button>
             </div>
-          </div>
             <!-- item5 -->
-           <div class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in">
-            <div class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full">
-              <div class="p1 "><img class="w-[72px] rounded-full" src="https://pbs.twimg.com/profile_images/1452637606559326217/GFz_P-5e_bigger.png" alt=""></div>
-              <div class="p2 font-bold pl-2  w-96 flex flex-col">
-                <span class="username text-white text-sm">MongoDB</span>
-                <span class="userhandle text-xs text-gray-500 font-semibold">@MongoDB</span>
+            <div
+              class="item px-5 p-3 space-y-4 max-h-[7.5rem] overflow-y-auto scroll-smooth hover:bg-[#23262c] transition-all ease-in"
+            >
+              <div
+                class="suggestedAccount font-bold text-sm text-gray-200 tracking-wide cursor-pointer flex w-full"
+              >
+                <div class="p1">
+                  <img
+                    class="w-[72px] rounded-full"
+                    src="https://pbs.twimg.com/profile_images/1452637606559326217/GFz_P-5e_bigger.png"
+                    alt=""
+                  />
+                </div>
+                <div class="p2 font-bold pl-2 w-96 flex flex-col">
+                  <span class="username text-white text-sm">MongoDB</span>
+                  <span class="userhandle text-xs text-gray-500 font-semibold"
+                    >@MongoDB</span
+                  >
+                </div>
+                <button
+                  class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 hover:bn bs"
+                >
+                  Follow
+                </button>
               </div>
-              <button class="follow text-[13px] border px-3 py-1.5 rounded-full text-black bg-white hover:bg-opacity-80 ">Follow</button>
             </div>
           </div>
-         </div>
-          <div class="showmore ml-1 text-blue-500 tracking-wide px-4 cursor-pointer hover:underline transition-all ease-in">show more</div>
+          <div
+            class="showmore ml-1 text-blue-500 tracking-wide px-4 cursor-pointer hover:underline transition-all ease-in"
+          >
+            show more
+          </div>
+        </div>
+        <!-- Term & Conditions -->
+        <div class="terms  w-2/3 m-4 mb-1  text-gray-500 text-xs leading-3 tracking-wide font-semibold flex flex-wrap gap-2">
+          <span class="hover:underline cursor-pointer">Terms of Service</span>
+          <span class="hover:underline cursor-pointer">Privacy Policy</span>
+          <span class="hover:underline cursor-pointer">Cookie Policy</span>
+          <span class="hover:underline cursor-pointer">Accessibility</span>
+          <span class="hover:underline cursor-pointer"> Ads info</span>
+          <span class="hover:underline cursor-pointer"> More </span>
+          <span class="hover:underline cursor-pointer">@ 2025 X Corp.</span>
         </div>
       </div>
     </div>
