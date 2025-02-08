@@ -596,24 +596,16 @@ video {
   position: relative;
 }
 
+.bottom-2\.5 {
+  bottom: 0.625rem;
+}
+
 .bottom-\[-33\%\] {
   bottom: -33%;
 }
 
 .left-\[17\%\] {
   left: 17%;
-}
-
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
-.bottom-3 {
-  bottom: 0.75rem;
-}
-
-.bottom-2\.5 {
-  bottom: 0.625rem;
 }
 
 .z-10 {
@@ -812,76 +804,12 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.cursor-text {
-  cursor: text;
-}
-
-.cursor-move {
-  cursor: move;
-}
-
-.cursor-help {
-  cursor: help;
-}
-
-.cursor-not-allowed {
-  cursor: not-allowed;
-}
-
 .cursor-none {
   cursor: none;
 }
 
-.cursor-context-menu {
-  cursor: context-menu;
-}
-
-.cursor-progress {
-  cursor: progress;
-}
-
-.cursor-nwse-resize {
-  cursor: nwse-resize;
-}
-
-.cursor-all-scroll {
-  cursor: all-scroll;
-}
-
-.cursor-grabbing {
-  cursor: grabbing;
-}
-
-.cursor-grab {
-  cursor: grab;
-}
-
-.cursor-no-drop {
-  cursor: no-drop;
-}
-
-.cursor-crosshair {
-  cursor: crosshair;
-}
-
-.cursor-vertical-text {
-  cursor: vertical-text;
-}
-
-.cursor-copy {
-  cursor: copy;
-}
-
-.cursor-alias {
-  cursor: alias;
-}
-
-.cursor-cell {
-  cursor: cell;
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-row {
@@ -1049,6 +977,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 242 242 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-100 {
   --tw-bg-opacity: 1;
 }
@@ -1154,6 +1092,10 @@ video {
   line-height: 2rem;
 }
 
+.text-\[0\.68rem\] {
+  font-size: 0.68rem;
+}
+
 .text-\[13px\] {
   font-size: 13px;
 }
@@ -1176,22 +1118,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[0\.50rem\] {
-  font-size: 0.50rem;
-}
-
-.text-\[0\.60rem\] {
-  font-size: 0.60rem;
-}
-
-.text-\[0\.70rem\] {
-  font-size: 0.70rem;
-}
-
-.text-\[0\.68rem\] {
-  font-size: 0.68rem;
 }
 
 .font-bold {
@@ -1253,10 +1179,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-\[0\.rem\] {
-  color: 0.rem;
 }
 
 .outline-none {
